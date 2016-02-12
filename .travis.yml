@@ -2,6 +2,8 @@ language: python
 
 python:
   - "2.7"
+  - "3.3"
+  - "3.4"
 
 install:
   - wget -O bibutils_5.6_src.tgz https://sourceforge.net/projects/bibutils/files/bibutils_5.6_src.tgz/download
@@ -12,7 +14,7 @@ install:
   - make install
   - cd ..
 
-  - pip install nose
+  - pip install nose sarge
 
 script:
   - nosetests --verbosity=2
