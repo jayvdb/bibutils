@@ -1,0 +1,13 @@
+*.pyc
+*.pyo
+*.*~
+/.tox
+/*.egg
+/*.egg-info/
+*pycache*
+.idea
+*.bak
+build
+.coverage
+dist
+docs/_build/

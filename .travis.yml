@@ -1,0 +1,18 @@
+language: python
+
+python:
+  - "2.7"
+
+install:
+  - wget -O bibutils_5.6_src.tgz https://sourceforge.net/projects/bibutils/files/bibutils_5.6_src.tgz/download
+  - tar -xzf bibutils_5.6_src.tgz
+  - cd bibutils_5.6/
+  - ./configure --install-dir $HOME/bin --install-lib $HOME/bin
+  - make
+  - make install
+  - cd ..
+
+  - pip install nose
+
+script:
+  - nosetests --verbosity=2
